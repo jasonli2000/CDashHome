@@ -32,5 +32,3 @@
    include(cdash_client_common.ctest)
 #
 #   # Client maintainer: jason.li@kitware.com
-   set(CTEST_SITE "crinothvm0-cdash.kitware")
-   set(CTEST_BUILD_NAME "CDashTest-Ubuntu-64-GTM-62")
