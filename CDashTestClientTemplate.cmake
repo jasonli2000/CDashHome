@@ -221,6 +221,20 @@ macro(dashboard_update_M)
   list(APPEND CTEST_NOTES_FILES "${_log}")
 endmacro()
 
+macro(cdashclient_update)
+  execute_process(
+    COMMAND ${CTEST_GIT_COMMAND} fetch origin
+    WORKING_DIRECTORY ${CTEST_SOURCE_DIRECTORY}
+    )
+  execute_process(
+    COMMAND ${CTEST_GIT_COMMAND} checkout master
+    WORKING_DIRECTORY ${CTEST_SOURCE_DIRECTORY}
+    )
+  execute_process(
+    COMMAND ${CTEST_GIT_COMMAND} merge origin/master
+    WORKING_DIRECTORY ${CTEST_SOURCE_DIRECTORY}
+    )
+endmacro()
 #-----------------------------------------------------------------------------
 
 # Send the main script as a note.
@@ -358,6 +372,7 @@ while(NOT dashboard_done)
   if(EXISTS "${dashboard_M_dir}")
     dashboard_update_M()
   endif()
+  ctest_update()
   if (GERRIT_BUILD)
     set(CTEST_UPDATE_OPTIONS "http://review.code.osehra.org/VistA ${JOB_REPOSITORY}")
   endif()
