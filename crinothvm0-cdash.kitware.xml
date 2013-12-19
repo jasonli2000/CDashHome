@@ -2,13 +2,13 @@
 <cdash>
  <system>
    <platform>Linux</platform>
-   <version>Ubuntu 12.04</version>
+   <version>Ubuntu</version>
    <bits>64</bits>
    <basedirectory>/home/jasonli/CDashHome/cdashclient_workspace</basedirectory>
  </system>
  <compiler>
    <name>GTM</name>
-   <version>600004</version>
+   <version>6.4</version>
    <generator>Unix Makefiles</generator>
  </compiler>
  <cmake>

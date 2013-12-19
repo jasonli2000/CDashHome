@@ -26,7 +26,7 @@
    set(CTEST_EXECUTABLE "C:/Program Files (x86)/CMake 2.8/bin/ctest")
    set(CTEST_DROP_SITE "code.osehra.org/CDash")
    set(CTEST_DROP_URL "/submit.php")
-   set(CTEST_DROP_DURATION 32400)        #32400 (seconds) means the listener will run for 9 hours
+   set(CTEST_DROP_DURATION 68400)        #68400 (seconds) means the listener will run for 19 hours
 
    # Now include the common setup for cdash
    include(cdash_client_common.ctest)
