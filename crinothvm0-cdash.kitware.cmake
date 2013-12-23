@@ -26,7 +26,7 @@
    set(CTEST_EXECUTABLE "/usr/bin/ctest")
    set(CTEST_DROP_SITE "code.osehra.org/CDash")
    set(CTEST_DROP_URL "/submit.php")
-   set(CTEST_DROP_DURATION 32400)        #32400 (seconds) means the listener will run for 9 hours
+   set(CTEST_DROP_DURATION 68400)        #68400 (seconds) means the listener will run for 18 hours
 
    # Now include the common setup for cdash
    include(cdash_client_common.ctest)
