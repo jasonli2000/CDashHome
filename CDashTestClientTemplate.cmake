@@ -5,8 +5,12 @@
 message("${CLIENT_BASE_DIRECTORY}")
 if(EXISTS "${CLIENT_BASE_DIRECTORY}/clientinformation.cmake")
   include("${CLIENT_BASE_DIRECTORY}/clientinformation.cmake")
+elseif(EXISTS "${CLIENT_BASE_DIRECTORY}/clientcustomrun.cmake")
+  include("${CLIENT_BASE_DIRECTORY}/clientcustomrun.cmake")
+  return()
 else()
   message(FATAL_ERROR "Client information file is missing. Exiting")
+  return()
 endif()
 
 if(JOB_MODULE)
